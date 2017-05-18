@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="./wp-content/themes/EmilysPlaceTheme/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="./wp-content/themes/EmilysPlaceTheme/assets/css/font-awesome.min.css">
 <link rel="stylesheet" href="./wp-content/themes/EmilysPlaceTheme/assets/css/nivo-slider.css">
+<link rel="stylesheet" href="./wp-content/themes/EmilysPlaceTheme/assets/css/prettyPhoto.css">
 <link rel="stylesheet" href="./wp-content/themes/EmilysPlaceTheme/assets/css/flickity.min.css">
 <link rel="stylesheet" href="./wp-content/themes/EmilysPlaceTheme/assets/css/main.css">
 <link rel="stylesheet" href="./wp-content/themes/EmilysPlaceTheme/assets/css/responsive.css">
@@ -388,48 +389,11 @@ Sunday CLOSED</p>
 	<script src="./wp-content/themes/EmilysPlaceTheme/assets/js/vendor/sticky.min.js"></script>
 	<script src="./wp-content/themes/EmilysPlaceTheme/assets/js/vendor/bootstrap.min.js"></script>
 	<script src="./wp-content/themes/EmilysPlaceTheme/assets/js/vendor/jquery.nivo.slider.pack.js"></script>
+	<script src="./wp-content/themes/EmilysPlaceTheme/assets/js/vendor/jquery.prettyPhoto.js"></script>
 	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script>-->
 	
 	<script src="./wp-content/themes/EmilysPlaceTheme/assets/js/main.js"></script>
 
 </body>
-<script type="text/javascript">
-jQuery(function($) {
-	$(".wpcf7-submit").click(function(event) {
-		var messageOutput = $(this).closest("form").children(".wpcf7-response-output");
-		$(document).ajaxComplete(function() {
-			var message = $(messageOutput).html();
-			var validMessage = function(){
-				swal({
-					type: "success",
-					title: "",
-					text: message,
-					timer: 3000,
-					showConfirmButton: false
-				});
-			};
-			var errorMessage = function(){
-				swal({
-					type: "warning",
-					title: "",
-					text: message,
-					timer: 3000,
-					showConfirmButton: false
-				});
-			};
-			setSwal = $(".wpcf7-response-output").hasClass("wpcf7-validation-errors") ? "alert" : "success";
-			if ( setSwal === "alert" ) { errorMessage() };
-			if ( setSwal === "success" ) { validMessage() };
-		});
-	});
-});
-</script>
-<script type='text/javascript' src='./wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
-/* ]]> */
-</script>
-<script type='text/javascript' src='./wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.6'></script>
 <script type='text/javascript' src='./wp-includes/js/wp-embed.min.js?ver=4.7'></script>
 </html>
